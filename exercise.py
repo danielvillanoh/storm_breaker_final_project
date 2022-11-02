@@ -14,5 +14,8 @@ class Triangle:
         self.s1 = s1
         self.s2 = s2
         self.s3 = s3
-   
+        
+def distance(point1,point2):
+    distance = point1 - point2
+    return distance
         
