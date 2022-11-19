@@ -2,6 +2,11 @@
 final project. 
 
 For this instance, we will create the baseball class, player and opponent class.
+
+Typically, a full game of baseball consists of 9 rounds, but for our final 
+project, we will truncate it to 4 rounds. The game will also be random based, 
+meaning the scenarios of the baseball game will be random and we will import
+random. 
 """
 
 
@@ -16,14 +21,14 @@ class Player():
     
     def __init__(self,name):
         """ 
-        Arguments: 
+        Argument: 
             name(str): the name of the player
         
         We will also the add 'score' attribute in the init magic method. 
         """
     def swing(self, pitch_and_catch = False):
         """ The player swings the ball.
-        Arguments:
+        Argument:
             pitch_and_catch(boolean): This will determine on whether the player
             is pitching and catching the ball, false by default. 
         """
@@ -32,15 +37,19 @@ class Player():
         """ The player pitches the ball. Only possible if the player isn't 
         swinging. 
         
+        Arguement: 
+
+        
         """
         
     def catch(self, pitch_and_catch = True):
-        """ 
+        """ The player attempts to catch the ball. Only possible if the player 
+        isn't swinging. 
+        
+        Argument: 
+
         """
         
-    def player_score(self):
-        """
-        """
         
 class Opponent(Player):
     """ This class represents the opponent or the second player. 
@@ -48,7 +57,7 @@ class Opponent(Player):
     """
 
 class Baseball:
-    """ This class represent the game of Baseball. 
+    """ This class represents the game of Baseball. 
     
     """
     
