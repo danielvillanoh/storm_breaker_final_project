@@ -60,8 +60,3 @@ class Baseball:
     """ This class represents the game of Baseball. 
     
     """
-    
-
-
-    
-    
