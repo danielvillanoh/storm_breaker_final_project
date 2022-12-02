@@ -8,6 +8,7 @@ project, we will truncate it to 4 rounds. The game will also be random based,
 meaning the scenarios of the baseball game will be random and we will import
 random. 
 """
+import random as rand 
 
 
 class Player():
@@ -26,27 +27,31 @@ class Player():
         
         We will also the add 'score' attribute in the init magic method. 
         """
+        self.name  = name 
+        self.score = []
     def swing(self):
-        """ The player swings the ball.
+        """ The player swings the ball. We will prompt the user 
+        to choose numbers from 2 to 14. 
         """
-
-    def pitch(self):
-        """ The player pitches the ball. Only possible if the player isn't 
-        swinging. 
+       
         
-        Arguement: 
-            pitch_and_catch(boolean): This will determine on whether the player
-            is pitching and catching the, 
+        strike = 0 
         
-        """
+        game_score = 0 
+        while strike != 3:
+            number = int(input("Choose a number from 2-14 to swing: "))
+            random_number  = rand.randint(2,14)
+            if number == random_number:
+                game_score += 1
+            else: 
+                strike += 1
         
-    def catch(self, pitch_and_catch = True):
-        """ The player attempts to catch the ball. Only possible if the player 
-        isn't swinging. 
+        self.score.append(game_score)
+        return f"The score of {self.name} is {self.score}."       
+            
         
-        Argument: 
-
-        """
+        
+        
         
         
 class Opponent(Player):
