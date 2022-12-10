@@ -8,6 +8,17 @@ project, we will truncate it to 4 rounds. The game will also be random based,
 meaning the scenarios of the baseball game will be random and we will import
 random. 
 """
+
+
+"""
+What we have so far, 
+f-strings, 
+inhertiance, 
+
+What we're planning to add: 
+optional argument,
+
+"""
 import random as rand 
 
 
@@ -47,7 +58,7 @@ class Player():
                 strike += 1
         
         self.score.append(game_score)
-        return f"The score of {self.name} is {self.score}."       
+        print(f"The score of {self.name} is {self.score}.")       
             
         
         
@@ -57,9 +68,30 @@ class Player():
 class Opponent(Player):
     """ This class represents the opponent or the second player. 
     The opponent class will inherit the properites of the Player class.  
-    
-    
+     
     """
+    
+    def botPlayer(self):
+        """
+        """
+       
+        
+    def botSwing(self):
+        """
+        """
+        
+        strike = 0
+        
+        game_score = 0 
+        while strike != 3: 
+            number = rand.randint(1,3)
+            random_guess = rand.randint(1,3)
+            if number  == random_guess: 
+                game_score += 1
+            else: 
+                strike += 1
+        
+        self.score.append(game_score)
 
 class Baseball:
     """ This class represents the game of Baseball. 
