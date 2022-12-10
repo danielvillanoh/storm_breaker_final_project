@@ -13,11 +13,14 @@ random.
 """
 What we have so far, 
 f-strings, 
-inhertiance, 
+ 
 
 What we're planning to add: 
 optional argument,
-
+sequence unpacking, 
+visualizing data????, 
+conditional expressions, 
+custom list sorting
 """
 import random as rand 
 
@@ -50,8 +53,8 @@ class Player():
         
         game_score = 0 
         while strike != 3:
-            number = int(input("Choose a number from 2-14 to swing: "))
-            random_number  = rand.randint(2,14)
+            number = int(input("Choose a number from 1-3 to swing: "))
+            random_number  = rand.randint(1,3)
             if number == random_number:
                 game_score += 1
             else: 
@@ -83,14 +86,23 @@ class Opponent(Player):
         strike = 0
         
         game_score = 0 
+        
+        #While the strike is not equals to three 
         while strike != 3: 
+            #The bot will have a random number variable
+            #And the guessing number is a seperate variable. 
             number = rand.randint(1,3)
             random_guess = rand.randint(1,3)
+            
+            #If the bot correctly guesses the guessing number
+            #The score will be added otherwise it's a strike.
             if number  == random_guess: 
                 game_score += 1
             else: 
                 strike += 1
         
+        #Once it's there's three strike simply append the game_score to the 
+        #score list
         self.score.append(game_score)
 
 class Baseball:
