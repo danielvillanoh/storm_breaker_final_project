@@ -13,10 +13,10 @@ random.
 """
 What we have so far, 
 f-strings, 
- 
+optional argument
 
 What we're planning to add: 
-optional argument,
+
 sequence unpacking, 
 visualizing data????, 
 conditional expressions, 
@@ -45,7 +45,7 @@ class Player():
         self.score = []
     def swing(self):
         """ The player swings the ball. We will prompt the user 
-        to choose numbers from 2 to 14. 
+        to choose numbers from 1 to 3. 
         """
        
         
@@ -60,8 +60,7 @@ class Player():
             else: 
                 strike += 1
         
-        self.score.append(game_score)
-        print(f"The score of {self.name} is {self.score}.")       
+        self.score.append(game_score)      
             
         
         
@@ -72,11 +71,7 @@ class Opponent(Player):
     """ This class represents the opponent or the second player. 
     The opponent class will inherit the properites of the Player class.  
      
-    """
-    
-    def botPlayer(self):
-        """
-        """
+    """    
        
         
     def botSwing(self):
@@ -105,7 +100,38 @@ class Opponent(Player):
         #score list
         self.score.append(game_score)
 
-class Baseball:
-    """ This class represents the game of Baseball. 
+def baseBall(games = 4):
+    """ This function represents the game of Baseball. 
     
     """
+    games_question = input("Would you like keep the amount of rounds(4)?: ")
+    
+    game_count = 0 
+    if games_question.lower == "no": 
+        amount_of_games = int(input("How many rounds(3 or lower) would you like?: "))
+        games = amount_of_games
+        
+    play_one = input("Please enter the name of your player: ")
+    player_one = Player(play_one)
+    
+    opp_play = input("Enter the name for the opposing player: ")
+    opp_player = Opponent(opp_play)
+         
+    bot_or_manual = int(input("If you would like a bot, press 0, press any number if otherwise: "))
+    while game_count != games:
+        if bot_or_manual == 0: 
+            player_one.swing()
+            opp_player.botSwing()
+        else:
+            player_one.swing()
+            opp_player.swing()
+
+        game_count += 1
+    
+    
+    
+            
+        
+    
+        
+        
