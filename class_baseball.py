@@ -14,13 +14,17 @@ random.
 What we have so far, 
 f-strings, 
 optional argument
+magic methods
+
 
 What we're planning to add: 
 
-sequence unpacking, 
+
 visualizing data????, 
 conditional expressions, 
 custom list sorting
+ArgumentParser??
+
 """
 import random as rand 
 
@@ -57,10 +61,18 @@ class Player():
             random_number  = rand.randint(1,3)
             if number == random_number:
                 game_score += 1
+                print(f"Home Run!")
             else: 
                 strike += 1
+                print("Stike!")
         
-        self.score.append(game_score)      
+        print("Strike three, you're out!")
+        
+        self.score.append(game_score)   
+    
+    def __str__(self):
+        return f"{self.name} has scored {sum(self.score)}"
+     
             
         
         
@@ -91,25 +103,24 @@ class Opponent(Player):
             
             #If the bot correctly guesses the guessing number
             #The score will be added otherwise it's a strike.
-            if number  == random_guess: 
+            if number == random_guess: 
                 game_score += 1
+                print("Bot has scored!")
             else: 
+                print("Bot has a strike!")
                 strike += 1
         
+            
         #Once it's there's three strike simply append the game_score to the 
         #score list
+        print("Bot is out!")
         self.score.append(game_score)
 
 def baseBall(games = 4):
     """ This function represents the game of Baseball. 
     
     """
-    games_question = input("Would you like keep the amount of rounds(4)?: ")
-    
     game_count = 0 
-    if games_question.lower == "no": 
-        amount_of_games = int(input("How many rounds(3 or lower) would you like?: "))
-        games = amount_of_games
         
     play_one = input("Please enter the name of your player: ")
     player_one = Player(play_one)
@@ -127,10 +138,10 @@ def baseBall(games = 4):
             opp_player.swing()
 
         game_count += 1
+    print (player_one.__str__() + " and " + opp_player.__str__())
     
-    
-    
-            
+if __name__ == "__main__":
+    baseBall()      
         
     
         
