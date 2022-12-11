@@ -14,6 +14,11 @@ random.
 What we have so far, 
 f-strings, 
 optional argument
+
+For Matt, think of hw#3 for drawing comparison between two Players espcially 
+less than and equal to. Think of __lt__ and __eq__. Note: this is connected to
+the conditional expressions you're about to do. 
+ 
 magic methods
 
 
@@ -21,9 +26,40 @@ What we're planning to add:
 
 
 visualizing data????, 
+
+
+For Matt, try to make a conditional expression on the baseBall function. 
+Declare a winner via conditional expression
+
 conditional expressions, 
-custom list sorting
+
+For Daniel K, after the game is over and the winner is declared, try to 
+make some sequence unpacking based on round one, round two, round three, and 
+round four. Ask the user if they would like to see their performance on any 
+round. 
+
+sequence unpacking
+
+custom list sorting???
+
 ArgumentParser??
+
+If you have any technique that's not listed above, please feel free add them, 
+and reach me so I can document who did what. 
+
+Following technique not listed: 
+super()
+
+regular expressions
+
+concatenating, merging, filtering, or performing groupby operations on Pandas 
+DataFrames
+
+with statements
+
+
+
+
 
 """
 import random as rand 
