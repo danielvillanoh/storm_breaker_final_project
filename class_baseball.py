@@ -176,9 +176,23 @@ def baseBall(games = 4):
         game_count += 1
     print (player_one.__str__() + " and " + opp_player.__str__())
     
+    if bot_or_manual == 0: 
+        print ("Player 1 wins" if player_one.score > opp_player.score
+        else "Bot wins" if opp_player.score > player_one.score
+        else "it's a tie" )
+
+    else :
+        print ("Player 1 wins" if player_one.score > opp_player.score
+        else "Player 2 wins" if opp_player.score > player_one.score
+        else "it's a tie" )
+    
+        
+
+        
+        
 if __name__ == "__main__":
     baseBall()      
         
-    
-        
+
+
         
