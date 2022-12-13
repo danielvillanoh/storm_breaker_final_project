@@ -13,7 +13,9 @@ This file was only used for our Collaborating Programming exercise.
 
 ## Running the Program 
 
-To run the program, simply type "python class_baseball.py". Replace python, with
+To run the program, simply type: 
+`python class_baseball.py`
+Replace python, with
 python3 if you're running on Mac. 
 
 ## Using the Program 
