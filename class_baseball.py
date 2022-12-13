@@ -19,14 +19,6 @@ conditional expressions,
 magic methods
 
 
-What we're planning to add: 
-
-
-visualizing data????, 
-
-sequence unpacking
-
-
 """
 import random as rand 
 
